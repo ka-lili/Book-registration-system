@@ -5,10 +5,9 @@ const {add,display,update,remove} = require("../controller/bookContoller.js");
     author: "meel",
     year: 2002
     },
- ]
+ ];
 
-
- add(addedBooks) 
+add(addedBooks) 
  display()
  update(1,"year",2014)
  remove(5)
