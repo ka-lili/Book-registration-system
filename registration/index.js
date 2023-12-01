@@ -1,4 +1,4 @@
-const {add,display} = require("../controller/bookContoller.js");
+const {add,display,update,remove} = require("../controller/bookContoller.js");
  let addedBooks = [
     {
     title: "love&loss",
@@ -9,6 +9,6 @@ const {add,display} = require("../controller/bookContoller.js");
 
 
  add(addedBooks) 
- display();
- update(1,year,2014);
- remove(5);
+ display()
+ update(1,"year",2014)
+ remove(5)
