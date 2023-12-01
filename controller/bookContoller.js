@@ -14,13 +14,13 @@ const add= (addedBooks) =>{
 //function to display books in library
 
 const display = () =>{
-    booksDatabase = booksDatabase.find(element => element.id === id);
-    console.log(/n"we have these books in our library"/n);
-    console.log(booksDatabase)
+    const books = booksDatabase.find(element => element.id === id);
+    console.log("we have these books in our library");
+    console.log(books)
 }
 //function to update books
 const update=(id,key,value)=>{
-    var exists=booksDatabase.find(ele=>ele.id===id);
+    var exists=booksDatabase.find(element=>element.id===id);
     if (!exists) {
         console.log("books not found\n");
     }
@@ -29,7 +29,7 @@ const update=(id,key,value)=>{
         exists[key]=value;
         
         console.log("books info updated\n");
-        console.log(exists);
+        console.log(exists)
 
     }
 }
@@ -40,14 +40,14 @@ const update=(id,key,value)=>{
 
 //function to remove books
 const remove=(id)=>{
-  var exists=books.find(ele=>ele.id===id);
+  var exists=books.find(element=>element.id===id);
   if (!exists) {
     console.log("books not found\n");
 
     
   } else {
-    var remaining=[];
-    remaining=books.filter(ele=>ele.id!==id);
+    let remaining=[];
+    remaining=books.filter(element=>element.id!==id);
     console.log(remaining);
     
   }  
@@ -59,7 +59,7 @@ module.exports = {
     add,
     display,
     update,
-    remove,
+    remove
 
    
 }
