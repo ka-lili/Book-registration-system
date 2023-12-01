@@ -14,9 +14,9 @@ const add= (addedBooks) =>{
 //function to display books in library
 
 const display = () =>{
-    const books = booksDatabase.find(element => element.id === id);
+    
     console.log("we have these books in our library");
-    console.log(books)
+    console.log(booksDatabase)
 }
 //function to update books
 const update=(id,key,value)=>{
@@ -40,14 +40,14 @@ const update=(id,key,value)=>{
 
 //function to remove books
 const remove=(id)=>{
-  var exists=books.find(element=>element.id===id);
+  var exists=booksDatabase.find(element=>element.id===id);
   if (!exists) {
     console.log("books not found\n");
 
     
   } else {
     let remaining=[];
-    remaining=books.filter(element=>element.id!==id);
+    remaining=booksDatabase.filter(element=>element.id!==id);
     console.log(remaining);
     
   }  
